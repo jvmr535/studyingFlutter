@@ -28,8 +28,7 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   width: 200,
                   height: 200,
-                  child: Image.network(
-                      'https://static.wikia.nocookie.net/baixa-qualidade/images/f/fb/Choris.png/revision/latest/scale-to-width-down/247?cb=20180630014909&path-prefix=pt-br'),
+                  child: Image.asset('assets/images/logo.jpg'),
                 ),
                 TextField(
                   keyboardType: TextInputType.emailAddress,
