@@ -4,7 +4,7 @@ import 'package:flutter_application_2/app_controller.dart';
 import 'package:flutter_application_2/home_page.dart';
 
 import 'home_page.dart';
-import 'login_screen.dart';
+import 'login_page.dart';
 
 class MyApp extends StatelessWidget {
   @override
