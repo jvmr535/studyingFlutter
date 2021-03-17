@@ -22,8 +22,8 @@ class HomePageState extends State<HomePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
           children: [
             Text('Contador $counter'),
             CustomSwitch(),
