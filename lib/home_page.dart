@@ -50,7 +50,7 @@ class HomePageState extends State<HomePage> {
                   color: Colors.black,
                 )
               ],
-            )
+            ),
           ],
         ),
       ),
