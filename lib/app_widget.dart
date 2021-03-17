@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/app_controller.dart';
+import 'package:flutter_application_2/home_page.dart';
 
-import 'Home_page.dart';
+import 'home_page.dart';
 import 'login_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,11 +14,17 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return MaterialApp(
             theme: ThemeData(
-                primarySwatch: Colors.red,
-                brightness: AppController.instance.isDarkTheme
-                    ? Brightness.dark
-                    : Brightness.light),
-            home: LoginPage(),
+              primarySwatch: Colors.red,
+              brightness: AppController.instance.isDarkTheme
+                  ? Brightness.dark
+                  : Brightness.light,
+            ),
+            initialRoute: '/',
+            routes: {
+              '/': (context) => LoginPage(),
+              '/home': (context) => HomePage(),
+            },
+            // home: LoginPage(),
           );
         });
   }
