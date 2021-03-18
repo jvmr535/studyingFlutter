@@ -19,8 +19,10 @@ class HomePageState extends State<HomePage> {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-              currentAccountPicture: Image.network(
-                  'https://instagram.fbhz4-1.fna.fbcdn.net/v/t51.2885-19/s150x150/91164021_149784546340120_1732440819085869056_n.jpg?tp=1&_nc_ht=instagram.fbhz4-1.fna.fbcdn.net&_nc_ohc=33yUk0_wZ-sAX-KeytM&ccb=7-4&oh=e2d1a239485fac306b6ee28a00fc145c&oe=607B8485'),
+              currentAccountPicture: ClipOval(
+                child: Image.network(
+                    'https://instagram.fbhz4-1.fna.fbcdn.net/v/t51.2885-19/s150x150/91164021_149784546340120_1732440819085869056_n.jpg?tp=1&_nc_ht=instagram.fbhz4-1.fna.fbcdn.net&_nc_ohc=33yUk0_wZ-sAX-KeytM&ccb=7-4&oh=e2d1a239485fac306b6ee28a00fc145c&oe=607B8485'),
+              ),
               accountName: Text('João Vitor'),
               accountEmail: Text('jvmr535@gmail.com'),
             ),
