@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/app_controller.dart';
 import 'package:flutter_application_2/home_page.dart';
+import 'package:flutter_application_2/tinder_page.dart';
 
 import 'home_page.dart';
 import 'login_page.dart';
@@ -23,8 +24,8 @@ class MyApp extends StatelessWidget {
             routes: {
               '/': (context) => LoginPage(),
               '/home': (context) => HomePage(),
+              '/tinder': (context) => TinderPage()
             },
-            // home: LoginPage(),
           );
         });
   }
