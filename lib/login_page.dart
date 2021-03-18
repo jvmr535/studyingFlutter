@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -30,42 +29,59 @@ class _LoginPageState extends State<LoginPage> {
                     height: 200,
                     child: Image.asset('assets/images/logo.jpg'),
                   ),
-                  TextField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      border: OutlineInputBorder(),
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 12, right: 12, top: 20, bottom: 12),
+                      child: Column(
+                        children: [
+                          TextField(
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: InputDecoration(
+                              labelText: 'Email',
+                              border: OutlineInputBorder(),
+                            ),
+                            onChanged: (text) {
+                              email = text;
+                            },
+                          ),
+                          Container(
+                            height: 20,
+                          ),
+                          TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              labelText: 'Password',
+                              border: OutlineInputBorder(),
+                            ),
+                            onChanged: (text) {
+                              password = text;
+                            },
+                          ),
+                          SizedBox(height: 15),
+                          RaisedButton(
+                            onPressed: () {
+                              if (email == 'jvmr535@gmail.com' &&
+                                  password == 'joao1234') {
+                                Navigator.of(context)
+                                    .pushReplacementNamed('/home');
+                              } else {
+                                print('errado');
+                              }
+                            },
+                            child: Container(
+                              width: double.infinity,
+                              child: Text(
+                                'Entrar',
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            color: Colors.red,
+                            textColor: Colors.white,
+                          ),
+                        ],
+                      ),
                     ),
-                    onChanged: (text) {
-                      email = text;
-                    },
-                  ),
-                  Container(
-                    height: 20,
-                  ),
-                  TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      border: OutlineInputBorder(),
-                    ),
-                    onChanged: (text) {
-                      password = text;
-                    },
-                  ),
-                  Container(
-                    height: 20,
-                  ),
-                  RaisedButton(
-                    onPressed: () {
-                      if (email == 'jvmr535@gmail.com' &&
-                          password == 'joao1234') {
-                        Navigator.of(context).pushReplacementNamed('/home');
-                      } else {
-                        print('errado');
-                      }
-                    },
-                    child: Text('Entrar'),
                   ),
                 ],
               ),
@@ -79,6 +95,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           SizedBox(
